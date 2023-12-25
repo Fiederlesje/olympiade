@@ -1,23 +1,22 @@
-import random as r
+def bereken_minimaal_aantal_stappen(opdracht: str) -> int:
+    oost = opdracht.count('O')
+    noord = opdracht.count('N')
+    zuid = opdracht.count('Z')
+    west = opdracht.count('W')
 
-K = r.randint(0,256)
-WR = ['N', 'O','Z','W']
-opg = ''
+    ver = abs(noord- zuid)
+    hor = abs(oost - west)
 
-for i in range(K):
-  random_wr = r.choice(WR)
-  opg = opg + str(random_wr)
+    minimaal_aantal_stappen = ver + hor
 
-o = opg.count('O')
-n = opg.count('N')
-z = opg.count('Z')
-w = opg.count('W')
+    return minimaal_aantal_stappen
 
-ver = abs(n - z)
-hor = abs(o - w)
+def main():
+    k = input()
+    opdracht = input()
 
-min_aant_stap = ver + hor
+    resultaat = bereken_minimaal_aantal_stappen(opdracht)
+    print(resultaat)
 
-print('K = ', K)
-print('Opdrachten = ', opg)
-print('minimaal aantal stappen =', min_aant_stap)
+if __name__ == '__main__':
+    main()
