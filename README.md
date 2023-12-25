@@ -12,3 +12,7 @@
 # Run tests
 `pytest`
 
+# Git
+`git add .`
+`git commit -m "comments"`
+`git push`
