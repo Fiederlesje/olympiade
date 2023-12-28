@@ -16,3 +16,6 @@
 `git add .`
 `git commit -m "comments"`
 `git push`
+
+# Run stdin from file
+`python my_script.py < input_file.txt`

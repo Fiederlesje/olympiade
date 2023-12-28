@@ -1,8 +1,3 @@
-# grondtal_bron = input()
-# getal_bron = input
-# grondtal_doel = input()
-
-
 def bereken_getal_doel(grondtal_bron: int, getal_bron: str, grondtal_doel: int) -> str:
     getal_decimaal = int(getal_bron, grondtal_bron) 
     loop_getal = getal_decimaal
