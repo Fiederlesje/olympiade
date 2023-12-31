@@ -10,8 +10,18 @@ from src import A3
                                                 (10, '132', 132)
                                         ])
 
-def test_A3(grondtal_bron: int, getal_bron: str, verwachting):
+def test_A3_decimaal(grondtal_bron: int, getal_bron: str, verwachting):
     assert A3.bereken_getal_decimaal(grondtal_bron, getal_bron) == verwachting
+
+
+@pytest.mark.parametrize("modulus, verwachting",
+                                        [
+                                                (13, 'd'),
+                                                (3, '3')
+                                        ])
+
+def test_A3_letters(modulus: int, verwachting):
+    assert A3.maak_letters(modulus) == verwachting
 
 
 @pytest.mark.parametrize("getal_decimaal, grondtal_doel, verwachting",
@@ -20,5 +30,5 @@ def test_A3(grondtal_bron: int, getal_bron: str, verwachting):
                                                 (132, 17, '7d')
                                         ])
 
-def test_A3(getal_decimaal: int, grondtal_doel: int, verwachting):
+def test_A3_getal_doel(getal_decimaal: int, grondtal_doel: int, verwachting):
     assert A3.bereken_getal_doel(getal_decimaal, grondtal_doel) == verwachting
